@@ -17,7 +17,7 @@
         compatible = "zmk,combos";
 
         combo_game {
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
             key-positions = <36 41>;
             timeout-ms = <200>;
         };
@@ -25,7 +25,7 @@
         game_esc {
             bindings = <&kp ESC>;
             key-positions = <1 2>;
-            layers = <6>;
+            layers = <7>;
         };
     };
 
@@ -98,10 +98,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESC         &kp Q  &kp W            &kp E                &kp R              &kp T           &kp Y         &kp U               &kp I                 &kp O             &kp P               &none
-&kp TAB         &kp A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G           &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SQT  &none
-&kp LEFT_SHIFT  &kp Z  &kp X            &kp C                &kp V              &kp B           &kp N         &kp M               &kp COMMA             &kp DOT           &kp FSLH            &none
-                                        &tkl 4 BACKSPACE     &tkl 1 SPACE       &tkl 5 LCTRL    &tkr 1 ENTER  &tkr 2 BACKSPACE    &tkr 7 DELETE
+&kp ESC         &kp Q            &kp W            &kp E                &kp R              &kp T         &kp Y         &kp U               &kp I                 &kp O             &kp P               &tog 0
+&kp TAB         &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G         &kp H         &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L  &hmr RIGHT_GUI SQT  &kp SEMI
+&kp LEFT_SHIFT  &kp Z            &kp X            &kp C                &kp V              &kp B         &kp N         &kp M               &kp COMMA             &kp DOT           &kp FSLH            &none
+                                                  &tkl 4 BACKSPACE     &tkl 3 SPACE       &tkl 6 TAB    &tkr 1 ENTER  &tkr 2 BACKSPACE    &tkr 5 DELETE
             >;
         };
 
@@ -113,8 +113,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp COLON       &kp DOLLAR       &kp PERCENT           &kp CARET              &kp PLUS           &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp MINUS              &kp RIGHT_BRACE    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp COLON       &kp SEMICOLON    &kp PERCENT           &kp CARET              &kp PLUS           &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
 &trans  &kp TILDE       &kp EXCLAMATION  &kp AT                &kp HASH               &kp PIPE           &trans  &trans     &trans     &trans    &trans    &trans
                                          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER          &trans  &trans     &trans
             >;
@@ -147,6 +147,15 @@
             >;
         };
 
+        fun {
+            bindings = <
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans     &trans     &trans    &trans    &trans
+                         &trans  &trans  &trans             &trans  &trans     &trans
+            >;
+        };
+
         mouse {
             bindings = <
 &trans  &kp K_REDO  &kp K_CUT     &kp K_COPY        &kp K_PASTE     &kp K_UNDO    &mkp MB4        &trans          &trans        &mkp MB5         &trans  &trans
@@ -161,16 +170,7 @@
 &trans  &kp TAB           &kp Q  &kp W  &kp E      &kp R    &trans    &trans          &trans        &trans           &trans  &trans
 &trans  &kp LEFT_SHIFT    &kp A  &kp S  &kp D      &kp F    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &kp LEFT_CONTROL  &kp Z  &kp X  &kp C      &kp V    &trans    &trans          &trans        &trans           &trans  &trans
-                                 &mo 7  &kp SPACE  &mo 2    &trans    &trans          &trans
-            >;
-        };
-
-        fun {
-            bindings = <
-&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN    &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK     &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK    &trans  &trans     &trans     &trans    &trans    &trans
-                         &trans  &trans  &trans             &trans  &trans     &trans
+                                 &mo 5  &kp SPACE  &mo 2    &trans    &trans          &trans
             >;
         };
     };
