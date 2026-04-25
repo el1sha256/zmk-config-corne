@@ -100,7 +100,6 @@
                 <&kp SPACE>,
                 <&macro_release>,
                 <&kp LGUI>;
-
         };
     };
 
@@ -130,10 +129,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp MINUS              &kp RIGHT_BRACE    &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp COLON       &kp SEMICOLON    &kp PERCENT           &kp CARET              &kp PLUS           &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-&trans  &kp TILDE       &kp EXCLAMATION  &kp AT                &kp HASH               &kp PIPE           &trans  &trans     &trans     &trans    &trans    &trans
-                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER          &trans  &trans     &trans
+&trans  &kp LEFT_BRACE  &kp AMPERSAND    &kp ASTERISK          &kp MINUS              &kp RIGHT_BRACE    &trans        &trans     &trans     &trans    &trans    &trans
+&trans  &kp COLON       &kp SEMICOLON    &kp PERCENT           &kp CARET              &kp PLUS           &trans        &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp TILDE       &kp EXCLAMATION  &kp AT                &kp HASH               &kp PIPE           &switch_lang  &trans     &trans     &trans    &trans    &trans
+                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER          &trans        &trans     &trans
             >;
         };
 
