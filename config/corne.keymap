@@ -91,9 +91,22 @@
         copy_macro: copy_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>, <&macro_press>;
-
+            bindings = <&macro_press>;
             label = "COPY_MACRO";
+        };
+
+        switch_lang: switch_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LGUI>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LGUI>;
+
+            label = "SWITCH_LANG";
         };
     };
 
