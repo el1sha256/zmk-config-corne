@@ -32,7 +32,6 @@
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -46,7 +45,6 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -60,7 +58,6 @@
 
         tkl: tkl {
             compatible = "zmk,behavior-hold-tap";
-            label = "TKL";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -74,7 +71,6 @@
 
         tkr: tkr {
             compatible = "zmk,behavior-hold-tap";
-            label = "TKR";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -92,7 +88,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_press>;
-            label = "COPY_MACRO";
         };
 
         switch_lang: switch_lang {
@@ -106,7 +101,6 @@
                 <&macro_release>,
                 <&kp LGUI>;
 
-            label = "SWITCH_LANG";
         };
     };
 
